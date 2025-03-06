@@ -35,7 +35,7 @@
      - `docker cp "$DATASET_PATH" postgres-container:/dataset.sql`
      - `docker exec postgres-container psql -U tremend -d company_db -f /dataset.sql`
    - Explanation: Defined the dataset path, copied `populatedb.sql` to the container, and imported it into `company_db` with 53 employees.
-   - Also there was an error in the populatedb.sql, there were more salaries than employees and there was a foreign key error when trying to assign a salary to a non-existent ID
+   - Also there was an error in the populatedb.sql, there were more salaries than employees and there was a foreign key error when trying to assign a salary to a non-existent ID, solved it by removing some salaries from the file
 
 7. **Ran Queries:**
    - Commands (in script):
